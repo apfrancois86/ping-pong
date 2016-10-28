@@ -10,5 +10,34 @@ body {
 
 .about {
   background-color: #86AF6B;
-  height: 10000px;
+  padding-left:35px;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+.about h4 {
+  color: #F6DEA2;
+}
+
+.about h5 {
+  color: #FFF;
+}
+
+.about a {
+  text-decoration: none;
+}
+
+.game {
+  padding-left: 50px;
+}
+
+.game img {
+  float:right;
+  width: 330px;
+  padding-right: 20px;
+}
+
+#number {
+  width: 250px;
+  display:inline-block;
 }
