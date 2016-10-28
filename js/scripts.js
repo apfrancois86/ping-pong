@@ -30,12 +30,12 @@ $(document).ready(function(){
     $("#output ol").empty();
 
     if (input > 50000) {
-      $("#secretOutput").show();
+      $("#secretOutput").show();//spec 6
     } else if (input > 0 && input < 50000) {
         results.forEach(function(result) {
         $("#output ol").append("<li>" + result + "</li>");
         });
-        $("#output ol").show();//output
+        $("#output ol").show();
         $('#secretOutput').hide();
       }
   });
