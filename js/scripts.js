@@ -4,12 +4,13 @@ var pingPong = function(number) {
   for (index = 1; index <= number; index++) {
     if (index % 15 === 0) {
       outputArray.push("ping-pong");
+      console.log(outputArray);
     } else if (index % 5 === 0) {
       outputArray.push("pong");
     } else if (index % 3 === 0) {
       outputArray.push("ping");
     } else {
-      outputArray.push[index];
+      outputArray.push(index);
     }
   } return outputArray;
 }
@@ -20,9 +21,10 @@ var pingPong = function(number) {
 
 //front end logic
 $(document).ready(function(){
-  $("#pingpong").submit(function(event)(
+  $("#pingpong").submit(function(event){
     event.preventDefault();
     var input = parseInt($("input#number").val());
+    console.log(input);
     var results = pingPong(input);
     $("#output").empty();
 
@@ -31,5 +33,5 @@ $(document).ready(function(){
     });
     $('#output').show();
 
-  ));
+  });
 });
