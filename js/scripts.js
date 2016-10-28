@@ -22,17 +22,27 @@ var pingPong = function(number) {
 
 //front end logic
 $(document).ready(function(){
-  $("#ping-pong").submit(function(event){
+  $("#pingPong").submit(function(event){
     event.preventDefault();
     var input = parseInt($("input#number").val());
     console.log(input);
     var results = pingPong(input);
-    $("#output").empty();//spec 5
+    $("#output ol").empty();//spec 5
 
-    results.forEach(function(result) {
-    $("#output").append("<li>" + result + "</li>");
-    });
-    $('#output').show();
-
+    if (input > 10000) {
+      $("#secretOutput").show();
+      $("#output").hide();
+      $("#pingpong").hide();
+    } else {
+        results.forEach(function(result) {
+        $("#output ol").append("<li>" + result + "</li>");
+        });
+        $("#output ol").show();
+      }
   });
 });
+
+// // if (results > 10000) {
+// //   ("#secretOutput").show();
+// //   ("#output").hide();
+// }

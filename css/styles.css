@@ -4,6 +4,7 @@ body {
 
 .jumbotron {
   text-align: center;
+  text-shadow: 5px 5px 2px #888888;
   background-color:#F6DEA2;
 
 }
@@ -40,4 +41,8 @@ body {
 #number {
   width: 250px;
   display:inline-block;
+}
+
+#secretOutput {
+  display: none;
 }
