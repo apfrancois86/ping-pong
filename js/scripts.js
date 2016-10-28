@@ -15,8 +15,8 @@ var pingPong = function(number) {
         }
       } return outputArray;
   } else {
-    return alert ("Enter a number greater than 0");
-  }
+      return alert ("Enter a number greater than 0");
+    }
 }
 
 
@@ -27,11 +27,11 @@ $(document).ready(function(){
     var input = parseInt($("input#number").val());
     console.log(input);
     var results = pingPong(input);
-    $("#output").empty();
+    $("#output").empty();//spec 5
 
     results.forEach(function(result) {
     $("#output").append("<li>" + result + "</li>");
-    });//spec 5
+    });
     $('#output').show();
 
   });
