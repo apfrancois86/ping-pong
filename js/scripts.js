@@ -27,22 +27,16 @@ $(document).ready(function(){
     var input = parseInt($("input#number").val());
     console.log(input);
     var results = pingPong(input);
-    $("#output ol").empty();//spec 5
+    $("#output ol").empty();
 
-    if (input > 10000) {
+    if (input > 50000) {
       $("#secretOutput").show();
-      $("#output").hide();
-      $("#pingpong").hide();
-    } else {
+    } else if (input > 0 && input < 50000) {
         results.forEach(function(result) {
         $("#output ol").append("<li>" + result + "</li>");
         });
-        $("#output ol").show();
+        $("#output ol").show();//output
+        $('#secretOutput').hide();
       }
   });
 });
-
-// // if (results > 10000) {
-// //   ("#secretOutput").show();
-// //   ("#output").hide();
-// }
