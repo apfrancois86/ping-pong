@@ -3,19 +3,19 @@ var pingPong = function(number) {
   if (number>0) {
     var outputArray= [];
       for (index = 1; index <= number; index++) {
-        //spec 1
+        //spec 2
         if (index % 15 === 0) {
-          outputArray.push("ping-pong");//spec 4
+          outputArray.push("ping-pong");//spec 5
         } else if (index % 5 === 0) {
-          outputArray.push("pong");//spec 3
+          outputArray.push("pong");//spec 4
         } else if (index % 3 === 0) {
-          outputArray.push("ping");//spec 2
+          outputArray.push("ping");//spec 3
         } else {
           outputArray.push(index);
         }
       } return outputArray;
   } else {
-      return alert ("Enter a number greater than 0");
+      return alert ("Enter a number greater than 0");//spec 1
     }
 }
 
@@ -30,7 +30,7 @@ $(document).ready(function(){
     $("#output ol").empty();
 
     if (input > 50000) {
-      $("#secretOutput").show();//spec 6
+      $("#secretOutput").show();//spec 7
     } else if (input > 0 && input < 50000) {
         results.forEach(function(result) {
         $("#output ol").append("<li>" + result + "</li>");
