@@ -3,13 +3,13 @@ var pingPong = function(number) {
   if (number>0) {
     var outputArray= [];
       for (index = 1; index <= number; index++) {
+        //spec 1
         if (index % 15 === 0) {
-          outputArray.push("ping-pong");
-          console.log(outputArray);
+          outputArray.push("ping-pong");//spec 4
         } else if (index % 5 === 0) {
-          outputArray.push("pong");
+          outputArray.push("pong");//spec 3
         } else if (index % 3 === 0) {
-          outputArray.push("ping");
+          outputArray.push("ping");//spec 2
         } else {
           outputArray.push(index);
         }
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
     results.forEach(function(result) {
     $("#output").append("<li>" + result + "</li>");
-    });
+    });//spec 5
     $('#output').show();
 
   });
