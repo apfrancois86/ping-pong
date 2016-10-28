@@ -4,7 +4,7 @@ var pingPong = function(number);
   for (index = 1; index <= number; index++) {
     if (index % 3 === 0) {
       outputArray.push("ping");
-    } else if (index) {
+    } else if (index % 5) {
 
     }
   }
