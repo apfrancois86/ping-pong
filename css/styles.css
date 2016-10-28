@@ -1,7 +1,14 @@
 body {
-  background-color: yellow;
+  background-color: #E8E8E8;
 }
 
 .jumbotron {
   text-align: center;
+  background-color:#F6DEA2;
+
+}
+
+.about {
+  background-color: #86AF6B;
+  height: 10000px;
 }
