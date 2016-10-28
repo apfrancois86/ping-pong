@@ -1,16 +1,18 @@
 //business logic
-var pingPong = function(number);
+var pingPong = function(number) {
   var outputArray= [];
   for (index = 1; index <= number; index++) {
-    if (index % 3 === 0) {
-      outputArray.push("ping");
+    if (index % 15 === 0) {
+      outputArray.push("ping-pong");
     } else if (index % 5 === 0) {
-      outputArrau.push("pong"); {
-
-    } else if
-
+      outputArray.push("pong");
+    } else if (index % 3 === 0) {
+      outputArray.push("ping");
+    } else {
+      outputArray.push[index];
     }
-  }
+  } return outputArray;
+}
 
 
 
@@ -24,8 +26,10 @@ $(document).ready(function(){
     var results = pingPong(input);
     $("#output").empty();
 
-    results.forEach(result);
+    results.forEach(function(result) {
     $("#output").append("<li>" + result + "</li>");
+    });
+    $('#output').show();
 
   ));
 });
